@@ -1,0 +1,33 @@
+{
+    "name": "wildwolf/wp-request-context",
+    "description": "WordPress request context helper library",
+    "license": "MIT",
+    "require": {
+        "composer/installers": "^1.0 || ^2.0",
+        "php": "^7.3 || ^8.0"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "phpunit/phpunit": "^9.5",
+        "psalm/plugin-phpunit": "^0.16.1",
+        "vimeo/psalm": "^4.9",
+        "wp-coding-standards/wpcs": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "WildWolf\\": "src/"
+        },
+        "classmap": ["src/"]
+    },
+    "scripts": {
+        "phpcs": "phpcs . -s",
+        "phpcs:fix": "phpcbf .",
+        "psalm": "psalm --long-progress --no-cache",
+        "phpunit": "phpunit",
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
