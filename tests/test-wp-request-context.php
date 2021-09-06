@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use WildWolf\WordPress\WP_Request_Context;
 
-class Test_WP_Request_Context extends TestCase {
+class Test_WP_Request_Context extends TestCase /* NOSONAR */ {
 	/**
 	 * @dataProvider context_data_provider
 	 * @runInSeparateProcess
