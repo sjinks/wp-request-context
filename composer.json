@@ -2,6 +2,11 @@
     "name": "wildwolf/wp-request-context",
     "description": "WordPress request context helper library",
     "license": "MIT",
+    "keywords": [
+        "wordpress",
+        "helper",
+        "context"
+    ],
     "require": {
         "composer/installers": "^1.0 || ^2.0",
         "php": "^7.3 || ^8.0"
