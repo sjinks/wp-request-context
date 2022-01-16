@@ -5,6 +5,8 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: read
     name: Build and Test
     runs-on: ubuntu-latest
     strategy:
