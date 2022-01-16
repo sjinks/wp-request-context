@@ -6,6 +6,8 @@ on:
 
 jobs:
   codestyle:
+    permissions:
+      contents: read
     name: Run code style check
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
