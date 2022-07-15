@@ -2,41 +2,33 @@ name: Static Code Analysis
 
 on:
   push:
+    branches:
+      - "**"
   workflow_dispatch:
 
-env:
-  PHP_VERSION: "7.4"
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   prepare:
-    permissions:
-      contents: read
     runs-on: ubuntu-latest
     name: Analyze the code with Psalm
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
     steps:
       - name: Check out source code
-        uses: actions/checkout@v3
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
       - name: Set up PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@cdb037c2a47e89a90eb317c7376c32a4cf92ddcc # tag=v2
         with:
-          php-version: ${{ env.PHP_VERSION }}
+          coverage: none
 
-      - name: Get composer cache directory
-        id: composer-cache
-        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
-
-      - name: Cache Composer packages
-        uses: actions/cache@v3.0.4
-        with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-interaction
+      - name: Install Composer Dependencies
+        uses: ramsey/composer-install@f680dac46551dffb2234a240d65ae806c2999dd6 # renovate: tag=2.1.0
 
       - name: Run psalm
         run: composer psalm -- --output-format=github
