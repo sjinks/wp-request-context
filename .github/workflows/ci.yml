@@ -20,17 +20,11 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - { wp: 5.5.x,   ms: 'no',  php: '7.4', phpunit: 7 }
-          - { wp: 5.6.x,   ms: 'no',  php: '7.4', phpunit: 7 }
-          - { wp: 5.7.x,   ms: 'no',  php: '7.4', phpunit: 7 }
           - { wp: 5.8.x,   ms: 'no',  php: '7.4', phpunit: 7 }
           - { wp: 5.9.x,   ms: 'no',  php: '7.4', phpunit: 7 }
           - { wp: latest,  ms: 'no',  php: '7.4', phpunit: 7 }
           - { wp: nightly, ms: 'no',  php: '7.4', phpunit: 7 }
 
-          - { wp: 5.5.x,   ms: 'yes', php: '7.4', phpunit: 7 }
-          - { wp: 5.6.x,   ms: 'yes', php: '7.4', phpunit: 7 }
-          - { wp: 5.7.x,   ms: 'yes', php: '7.4', phpunit: 7 }
           - { wp: 5.8.x,   ms: 'yes', php: '7.4', phpunit: 7 }
           - { wp: 5.9.x,   ms: 'yes', php: '7.4', phpunit: 7 }
           - { wp: latest,  ms: 'yes', php: '7.4', phpunit: 7 }
