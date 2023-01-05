@@ -12,7 +12,7 @@
         "php": "^7.4 || ^8.0"
     },
     "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
         "phpcompatibility/phpcompatibility-wp": "^2.1",
         "phpunit/phpunit": "^9.5",
         "psalm/plugin-phpunit": "^0.18.0",
