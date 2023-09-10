@@ -12,8 +12,7 @@
 
 	<rule ref="PHPCompatibilityWP"/>
 	<rule ref="WordPress-Core">
-		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
-		<exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
 	</rule>
 	<rule ref="WordPress-Extra"/>
 
