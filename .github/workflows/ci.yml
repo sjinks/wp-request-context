@@ -48,3 +48,4 @@ jobs:
         with:
           files: clover.xml
           flags: unittests
+          token: ${{ secrets.CODECOV_TOKEN }}
