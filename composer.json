@@ -14,7 +14,7 @@
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
         "phpcompatibility/phpcompatibility-wp": "^2.1",
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^11.0",
         "psalm/plugin-phpunit": "^0.19.0",
         "vimeo/psalm": "^5.0",
         "wp-coding-standards/wpcs": "^3.0"
