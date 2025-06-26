@@ -25,7 +25,7 @@ class Test_WP_Request_Context extends TestCase /* NOSONAR */ {
 	/**
 	 * @psalm-return iterable<array-key,array{?string, ?string, bool, bool, bool}>
 	 */
-	public function context_data_provider(): iterable {
+	public static function context_data_provider(): iterable {
 		return [
 			'web'        => [ null, null, false, false, true ],
 			'ajax'       => [ 'is_ajax', 'DOING_AJAX', true, false, false ],
